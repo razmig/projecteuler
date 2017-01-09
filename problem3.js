@@ -4,15 +4,15 @@
  * What is the largest prime factor of the number 600851475143 ?
  */
 
-module.exports = function() {
-    var max = 600851475143;
+module.exports = function(maxNumber) {
+    var max = maxNumber;
     var target = max;
     var values = [];
     var i = 0;
 
     while(i <= target) {
-        if (target%i === 0) {
-            var target = target/i;
+        if (target % i === 0) {
+            var target = target / i;
             values.push(i);
         }
         i++

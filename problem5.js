@@ -6,7 +6,7 @@
 
  module.exports = function(min, max) {
     var target;
-    var i = max+1;
+    var i = 1;
     while (i) {
         var values = []
         for (var v = min; v <= max; v++) {

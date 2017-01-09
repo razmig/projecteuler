@@ -10,12 +10,12 @@ module.exports = function () {
     var values = []
 
     for( var a =999; a >=100; a--) {
-      for( var b = 999; b >= 100; b--) {
-	result = String(a * b)
-	if (result === result.split('').reverse().join('')) {
-	  values.push(result)
-	}
-      }
+        for( var b = 999; b >= 100; b--) {
+            result = String(a * b)
+            if (result === result.split('').reverse().join('')) {
+                values.push(result)
+            }
+        }
     }
 
     return Math.max.apply(null, values)

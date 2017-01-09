@@ -6,20 +6,20 @@
  * find the sum of the even-valued terms.
  */
 
-module.exports = function() {
-    sum=0;
+module.exports = function(target) {
+    values = [];
     var prev=0;
     var current=1;
     var next=1;
 
-    while(current < 4000000){
+    while(current < target){
         next = prev + current;
         prev = current;
         current = next;
         if(current % 2 == 0){
-            sum += next;
+            values.push(current)
         }
     }
 
-    return sum
+    return values.reduce(function(a, b) { return a + b })
 }
